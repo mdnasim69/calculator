@@ -16,6 +16,16 @@ class CalculatorApp extends StatelessWidget {
   }
 }
 
+class Home extends StatelessWidget {
+  const Home({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return const Placeholder();
+  }
+}
+
+
 class CalculatorScreen extends StatefulWidget {
   @override
   _CalculatorScreenState createState() => _CalculatorScreenState();
@@ -78,18 +88,18 @@ class _CalculatorScreenState extends State<CalculatorScreen> {
   Widget buildButton(String buttonText) {
     return Expanded(
       child: Padding(
-        padding: const EdgeInsets.all(8.0),
+        padding: const EdgeInsets.all(4),
         child: ElevatedButton(
           onPressed: () => buttonPressed(buttonText),
           style: ElevatedButton.styleFrom(
               padding: EdgeInsets.all(20),
-              backgroundColor: Colors.yellow,
-              side: BorderSide(color: Colors.black, width: 2),
+              backgroundColor: Colors.green,
+              side: BorderSide(color: Colors.black, width: 5),
               foregroundColor: Colors.black),
           child: Text(
             buttonText,
             style: TextStyle(
-                fontSize: 20,
+                fontSize: 27,
                 fontWeight: FontWeight.bold),
           ),
         ),
